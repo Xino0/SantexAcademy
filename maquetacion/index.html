@@ -4,53 +4,204 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Xacademy Clase 1 maquetacion</title>
     <style>
         body {
             margin: 0;
         }
-        p {
-            margin-right: 40px;
+        #header{
+            border-bottom: 1px solid gray;
+            display: flex;
+            margin: -82px 0px 0px;
+            padding: 0px;
+            width: 100%;
+            position: fixed;
+            z-index: 1000;
+            justify-content: space-between;
+            background-color: white;
+        }
+        #header-right{
+            margin-right: 250px;
+            font-size: 13px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold 100;
+        }
+        #header-right img{
+            margin: 10px;
+            width: 14px;
+        }
+        #header-right img:hover{
+            filter: invert(15%) sepia(91%) saturate(4419%) hue-rotate(270deg) brightness(110%) contrast(101%);
+            cursor: pointer;
+        }
+        #header-right p{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #header-right p:hover{
+            color: #6b53f0;
+            cursor: pointer;
         }
         h1 {
-            margin: 0px 400px;
+            font-size: 31px;
+            font-family: 'Roboto', sans-serif;
+            margin: 45px 630px 0px;
             text-align: center;
+            font-weight: 500;
+            letter-spacing: -1px;
+            line-height: 35px;
+
+        }
+        #header-right button.redondo{
+            margin-right: 10px; 
+            margin-left: 10px; 
+        }
+        #header-right button.redondo:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
         }
         button.redondo {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold 100;
             background-color: white;
-            border: 1px solid black;
+            border: 2px solid black;
             border-radius: 25px;
-            padding: 0px 20px;
-            height: 32px;
+            padding: 0px 20px 2px;
+            height: 35px;
+            text-align: center;
         }
         div#introduction-actions {
             display: flex;
             justify-content: center;
         }
+        #header-left{
+            margin-left: 250px;
+            margin-top: 10px;
+            margin-bottom: 12px;
+        }
+        #button-contactanos:hover{
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        }
+        #button-sumate{
+            color: #6b53f0;
+        }
+        #button-sumate:hover{
+            color: white; 
+            background-color: #6b53f0;
+            cursor: pointer;
+        }
+        #back {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            background-color: #201b24;
+        }
+        #block-impacto{
+            position: relative;
+            display: inline-block;
+            height: 150px;
+            width: 400px;
+            top:132px;
+            left: 535px;
+
+        }
+        #back #block-impacto .texto-impacto-h2{
+            margin: 0;
+            position: absolute;
+            font-size: 32px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            color: white;
+            margin: 0;
+
+        }
+        #back #block-impacto .texto-impacto-p{
+            margin: 0;
+            position: absolute;
+            width: 365px;
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold 300;
+            line-height: 21px;
+            color: white;
+            top: 53px;
+        }
+        #info{
+            position: relative;
+            display: inline-block;
+            width: 350px;
+            height: 70px;
+            left: 590px;
+            top: 110px;
+        }
+        #info .conteo-numeros p{
+            margin: 0;
+            position: absolute;
+            line-height: 0.80;
+            font-size: 60px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+        #info .conteo-texto p{
+            margin: 0;
+            position: absolute;
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold 400;
+            color: gray;
+        }
     </style>
 </head>
 <body>
-    <div id="header" style="border-bottom: 1px solid gray; display: flex; padding: 10px 100px; justify-content: space-between">
+    <nav id="header">
         <div id="header-left">
-            <img src="logo.svg">
+            <img style="cursor: pointer;margin:10px 0px 5px;"src="logo.svg" >
         </div>
         <div id="header-right" style="display: flex; align-items: center;">
             <p>Nosotros</p>
             <p>Programas</p>
-            <p>Capaciontaciones</p>
+            <p>Capacitaciones</p>
             <p>Alianzas</p>
             <p>Contacto</p>
-            <button class="redondo">Sumate +</button>
+            <button class="redondo" >Sumate +</button>
+            <img src="Instagram-icon.svg">
+            <img src="linkedin-icon.svg">
         </div>
-    </div>
-    <div id="introduction" style="padding: 48px;">
+    </nav>
+    <div id="introduction" style="padding: 48px;margin-top: 82px;">
         <div id="introduction-text">
             <h1>Somos una Fundación dedicada a mejorar la calidad de vida de las personas y su entorno, a través de la tecnología.</h1>
         </div>
-        <div id="introduction-actions" style="margin-top: 25px;">
-            <button class="redondo">Contactanos -></button>
-            <button class="redondo" style="margin-left: 14px;">Sumate +</button>
+        <div id="introduction-actions" style="margin-top: 25px;margin-bottom: 35px;">
+            <button id="button-contactanos"class="redondo">Contactanos -></button>
+            <button id="button-sumate"class="redondo" style="margin-left: 14px;border-color: #6b53f0;">Sumate +</button>
         </div>
     </div>
+    <div id="back">
+        <div id="block-impacto">
+            <h2 class="texto-impacto-h2">. Impacto</h2>
+            <p class="texto-impacto-p">Buscamos construir alianzas y fortalecer vínculos para generar una transformación real en la comunidad. Trabajamos para acercar la tecnología innovadora y disruptiva del sector privado hacia el sector social.</p>
+        </div>
+        <div id="info">
+            <div class="conteo-numeros">
+                <p style="left: 2px;">58</p>
+                <p style="left: 108px;display: flex;align-items: center;"><span style="color: #6b53f0;">+</span>50</p>
+                <p style="left: 240px;">301</p>
+            </div>
+            <div class="conteo-texto">
+                <p style="bottom: 0;left: 0px;">Localidades</p>
+                <p style="bottom: 0;left: 136px;">Mentores</p>
+                <p style="bottom: 0;left: 248px;">Participantes</p>
+            </div>
+        </div>
+    </div>
+    <div><img style="display: flex;width: 100%;height: auto;" src="https://technologywithpurpose.org/wp-content/uploads/2022/11/twp-home.jpg"></div>
 </body>
 </html>
